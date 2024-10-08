@@ -9,3 +9,11 @@ const companyData = {
 };
 
 console.log(companyData);
+
+// LOGO Y NOMBRE DE NAVEGADOR
+
+   // Seleccionamos el elemento DOM el que tiene el id = "companyName" 
+   // Substituir el objeto textContent por CompanyData.name
+
+const nameDOM = document.getElementById("companyName")
+nameDOM.textContent = companyData.name
