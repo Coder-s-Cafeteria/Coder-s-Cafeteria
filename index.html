@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coders Cafe</title>
     <link rel="icon" href="coffee.ico.ico">
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+
     />
 
     <link rel="stylesheet" href="styles/base.css" />
@@ -16,13 +16,17 @@
     <link rel="stylesheet" href="styles/hero.css" />
     <link rel="stylesheet" href="styles/whats-new.css" />
     <link rel="stylesheet" href="styles/form.css" />
+    <link rel="stylesheet" href="styles.css" />
     <script src="./main.js" defer></script>
   </head>
   <body>
     <header>
       <div class="container">
         <nav>
-          <div class="logo" id="companyName">CODERS COFFE</div>
+          <div>
+            <img class="cafe1"  src="coffee-beans_3219300.png" alt="Cafe" />
+            <div class="logo" id="companyName">CODERS COFFE</div>
+          </div>
           <div class="nav-links">
             <a href="#">Home</a>
             <a href="#">About</a>
@@ -33,14 +37,22 @@
       </div>
     </header>
     <body> 
-      <div class="hero" style="background-color: var(--background-color);">
-          <h2 id="claim" style="color: var(--primary-color);"></h2>
-          <p id="text" style="color: var(--primary-color);"></p>
-      </div>
       <button type="button" id="editCompanyBtn" class="open-edit-form-button">
+        
+
+        <form>
+        <label>Selecciona tu compañia</label>
+        <select>
+          <option value="Nombre de empresa"><input type="text" id="nombre" name="nombre"></option>
+        </select>
+          <label for="nombre">Nombre:</label> 
+            <input type="text" id="nombre" name="nombre"> 
+          <label for="email">Correo electrónico:</label> 
+            <input type="email" id="email" name="email">
+          <label></label>
+        </form>
         <i class="fas fa-edit"></i> Edit Company
       </button>
-
       <div class="container">
         <div class="hero-image">
           <img

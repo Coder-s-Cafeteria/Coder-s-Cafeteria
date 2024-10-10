@@ -20,27 +20,35 @@ nameDOM.textContent = companyData.name
 
 // Epica 1
   const companyName =  {
-    name: "Acme corporation"
+    name: "companyData.name"
   };
 
-  function capitalizeFirstLetter(){
-    return string.chart(0) .toUpperCase() + string.slice(1);
+  function capitalizeFirstLetter(companyData){
+    
 
   }
 
   // Historia 1.1
-  const companyData0 = capitalizeFirstLetter(companyData.name)
+  const companyData0 = capitalizeFirstLetter("companyName")
 
   document.querySelector('#companyName').innerHTML = "Coders Cafe"
 
-  getElementById.companyData = {
-    logoUrl: "https://plus.unsplash.com/premium_photo-1664474619075-644dd191935f?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8aW1hZ2V8ZW58MHx8MHx8fDA%3D"
-  };
+  const cafe1 = document.getElementById("cafe1")
+
+  companyImageDOM = document.getElementById("companyImage");
+  companyImageDOM.setAttribute("src", companyData.imageUrl);
+
+  let companyClaimDOM = document.getElementById("companyClaim")
+    companyClaimDOM.textContent = companyData.claim
+
+let rootVariablesDOM = document.documentElement
+rootVariablesDOM.style.setProperty ("--back-color", companyData.backgroundColor);
+rootVariablesDOM.style.setProperty ("--primary-color", companyData.primaryColor);
   
-  // Historia 1.2
+/*  // Historia 1.2
   const heroElement = document.getElementById("hero");
   const heroImage = document.createElement("img");
-  heroImage.src = companyData.logoUrl;
+  heroImage.src = companyData.imageUrl;
   heroElement.appendChild (heroImage);
 
   // Historia 1.3
@@ -56,3 +64,9 @@ const textElement = document.getElementById('text');
 
 claimElement.textContent = companyData.claim;
 textElement.textContent = companyData.text;
+
+//-------------- 
+//Manipular el DOM de companyImage
+
+ companyImageDOM = document.getElementById("companyImage");
+ companyImageDOM.setAttribute("src", companyData.imageUrl);*/
