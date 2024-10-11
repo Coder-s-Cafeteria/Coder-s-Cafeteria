@@ -48,3 +48,23 @@ const closeBoton = document.getElementById("closeCompanyFormBtn")
 closeBoton.addEventListener ("click", function(){
   companyForm.classList.add ("hidden")
 })
+
+//Historia 2.2: Cargar los datos actuales de la empresa en el formulario
+
+const companyNameInputDOM = document.getElementById("companyNameInput")
+companyNameInputDOM.value = companyData.name
+
+const companyImgInputDOM = document.getElementById("companyImageURLInput")
+companyImgInputDOM.value = companyData.imageUrl
+
+const companyPrimInputDOM = document.getElementById("primaryColorInput")
+companyPrimInputDOM.value = companyData.primaryColor
+
+const companyBackInputDOM = document.getElementById("backgroundColorInput")
+companyBackInputDOM.value = companyData.backgroundColor
+
+const companyClaimInputDOM = document.getElementById("companyClaimInput")
+companyClaimInputDOM.value = companyData.claim
+
+const companyTextInputDOM = document.getElementById("companyTextInput")
+companyTextInputDOM.value = companyData.text
