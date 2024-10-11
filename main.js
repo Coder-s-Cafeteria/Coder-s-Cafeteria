@@ -44,48 +44,71 @@ openBoton.addEventListener("click", function () {
   companyFormContainer.classList.remove("hidden");
 });
 
-const closeBoton = document.getElementById("closeCompanyFormBtn")
-closeBoton.addEventListener ("click", function(){
-  companyFormContainer.classList.add ("hidden")
-})
+const closeBoton = document.getElementById("closeCompanyFormBtn");
+closeBoton.addEventListener("click", function () {
+  companyFormContainer.classList.add("hidden");
+});
 
 //Historia 2.2: Cargar los datos actuales de la empresa en el formulario
 
-const companyNameInputDOM = document.getElementById("companyNameInput")
-companyNameInputDOM.value = companyData.name
+const companyNameInputDOM = document.getElementById("companyNameInput");
+companyNameInputDOM.value = companyData.name;
 
-const companyImgInputDOM = document.getElementById("companyImageURLInput")
-companyImgInputDOM.value = companyData.imageUrl
+const companyImgInputDOM = document.getElementById("companyImageURLInput");
+companyImgInputDOM.value = companyData.imageUrl;
 
-const companyPrimInputDOM = document.getElementById("primaryColorInput")
-companyPrimInputDOM.value = companyData.primaryColor
+const companyPrimInputDOM = document.getElementById("primaryColorInput");
+companyPrimInputDOM.value = companyData.primaryColor;
 
-const companyBackInputDOM = document.getElementById("backgroundColorInput")
-companyBackInputDOM.value = companyData.backgroundColor
+const companyBackInputDOM = document.getElementById("backgroundColorInput");
+companyBackInputDOM.value = companyData.backgroundColor;
 
-const companyClaimInputDOM = document.getElementById("companyClaimInput")
-companyClaimInputDOM.value = companyData.claim
+const companyClaimInputDOM = document.getElementById("companyClaimInput");
+companyClaimInputDOM.value = companyData.claim;
 
-const companyTextInputDOM = document.getElementById("companyTextInput")
-companyTextInputDOM.value = companyData.text
+const companyTextInputDOM = document.getElementById("companyTextInput");
+companyTextInputDOM.value = companyData.text;
 
-//historia 2.3 :identificar de donde esta saliendo el nombre (company name imputDOM ) 
+//historia 2.3 :identificar de donde esta saliendo el nombre (company name imputDOM )
 //añadir valores en el objeto
 //utilizar funcion updatecompany DOM
 
-const companyForm = document.getElementById ("#companyForm")
-companyForm.addEventListener ("submit", function(e){
-  e.preventDefault()
-  companyData.name = companyNameInputDOM.value
-  companyData.primaryColor = companyPrimInputDOM.value
-  companyData.backgroundColor = companyBackInputDOM.value
-  companyData.claim = companyClaimInputDOM.value
-  companyData.text = companyTextInputDOM.value
-  companyData.imageUrl = companyImgInputDOM.value
-  updateCompanyDOM()
-  companyFormContainer.classList.add ("hidden")
+const companyForm = document.getElementById("#companyForm");
+companyForm.addEventListener("submit", function (e) {
+  e.preventDefault();
+  companyData.name = companyNameInputDOM.value;
+  companyData.primaryColor = companyPrimInputDOM.value;
+  companyData.backgroundColor = companyBackInputDOM.value;
+  companyData.claim = companyClaimInputDOM.value;
+  companyData.text = companyTextInputDOM.value;
+  companyData.imageUrl = companyImgInputDOM.value;
+  updateCompanyDOM();
+  companyFormContainer.classList.add("hidden");
+});
 
+// Épica: Personalización de la sección "Novedades y Ofertas"
+/*Crear el array de productos.
+Imprimir los productos en el HTML.
+Implementar el formulario de personalización.
+Actualizar el array y la interfaz de la página al hacer clic en "Guardar".*/
 
-  
-
-})
+let offers = [
+  {
+    name: "Green Vegetables",
+    image:
+      "https://c8.alamy.com/comp/2CH190N/photo-of-green-wet-vegetable-set-with-water-drops-2CH190N.jpg",
+    price: 9.99,
+  },
+  {
+    name: "Fruit Pack",
+    image:
+      "https://c8.https://www.fruitypack.com/assets/files/w-star-mix-1.960x640.jpg",
+    price: 14.99,
+  },
+  {
+    name: "Lemons and Oranges",
+    image:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEX1cf3cY-2yQOnyP2eWFnqUy9G5B5gbyP2Q&s",
+    price: 7.99,
+  },
+];
