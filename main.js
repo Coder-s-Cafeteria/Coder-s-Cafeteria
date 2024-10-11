@@ -1,7 +1,7 @@
 const companyData = {
   name: "Coders Cafe",
-  primaryColor: "#2c5545",
-  backgroundColor: "#e3e3e3",
+  primaryColor: "azure",
+  backgroundColor: "green",
   claim: "We make the best widgets",
   text: "We are the best company in the world, except for the other companies that are better than us.",
   imageUrl:
@@ -10,23 +10,29 @@ const companyData = {
 
 console.log(companyData);
 
-const companyNameDOM = document.getElementById("companyName");
-companyNameDOM.textContent = companyData.name
+function updateCompanyDOM() {
+  const companyNameDOM = document.getElementById("companyName");
+  companyNameDOM.textContent = companyData.name;
 
-const companyName2DOM = document.getElementById("companyName2");
-companyName2DOM.textContent = companyData.name
+  const companyName2DOM = document.getElementById("companyName2");
+  companyName2DOM.textContent = companyData.name;
 
-const companyImgDOM = document.getElementById("companyImage");
-companyImgDOM.setAttribute("src", companyData.imageUrl)
+  const companyImgDOM = document.getElementById("companyImage");
+  companyImgDOM.setAttribute("src", companyData.imageUrl);
 
-const companyClaimDOM = document.getElementById("companyClaim")
-companyClaimDOM.textContent = companyData.claim
+  const companyClaimDOM = document.getElementById("companyClaim");
+  companyClaimDOM.textContent = companyData.claim;
 
-const companyTextDOM = document.getElementById("companyText")
-companyTextDOM.textContent = companyData.text
+  const companyTextDOM = document.getElementById("companyText");
+  companyTextDOM.textContent = companyData.text;
 
-const companyPrimDOM = document.getElementById("primaryColorInput")
-companyPrimDOM.setAttribute("primaryColorInput", companyData.primaryColor)
-
-const companyBackDOM = document.getElementById("backgroundColorInput")
-companyBackDOM.setAttribute("backgroundColorInput", companyData.backgroundColor)
+  document.documentElement.style.setProperty(
+    "--back-color",
+    companyData.backgroundColor
+  );
+  document.documentElement.style.setProperty(
+    "--primary-color",
+    companyData.primaryColor
+  );
+}
+updateCompanyDOM()
