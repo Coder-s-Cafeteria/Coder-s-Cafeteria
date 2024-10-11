@@ -44,6 +44,14 @@ nameDOM.textContent = companyData.name
 let rootVariablesDOM = document.documentElement
 rootVariablesDOM.style.setProperty ("--back-color", companyData.backgroundColor);
 rootVariablesDOM.style.setProperty ("--primary-color", companyData.primaryColor);
+
+document.addEventListener('click', function(){
+  const editCompanyBtn = boton;
+  boton = document.getElementById ('fas fa-edit')
+})
+
+const boton = document.getElementById 
+
   
 /*  // Historia 1.2
   const heroElement = document.getElementById("hero");

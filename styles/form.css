@@ -62,3 +62,19 @@
   cursor: pointer;
   margin: auto;
 }
+
+.open-edit-form-button {
+ display: block;
+ transition: all 0.3s ease-in-out;
+}
+
+
+ .sidebar {
+  position: static;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 300px;
+  display: inline;
+  padding: 20px;
+ }
