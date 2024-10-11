@@ -37,16 +37,16 @@ function updateCompanyDOM() {
 }
 updateCompanyDOM();
 
-const companyForm = document.getElementById("companyForm");
+const companyFormContainer = document.getElementById("companyForm");
 
 const openBoton = document.getElementById("editCompanyBtn");
 openBoton.addEventListener("click", function () {
-  companyForm.classList.remove("hidden");
+  companyFormContainer.classList.remove("hidden");
 });
 
 const closeBoton = document.getElementById("closeCompanyFormBtn")
 closeBoton.addEventListener ("click", function(){
-  companyForm.classList.add ("hidden")
+  companyFormContainer.classList.add ("hidden")
 })
 
 //Historia 2.2: Cargar los datos actuales de la empresa en el formulario
@@ -68,3 +68,24 @@ companyClaimInputDOM.value = companyData.claim
 
 const companyTextInputDOM = document.getElementById("companyTextInput")
 companyTextInputDOM.value = companyData.text
+
+//historia 2.3 :identificar de donde esta saliendo el nombre (company name imputDOM ) 
+//añadir valores en el objeto
+//utilizar funcion updatecompany DOM
+
+const companyForm = document.getElementById ("#companyForm")
+companyForm.addEventListener ("submit", function(e){
+  e.preventDefault()
+  companyData.name = companyNameInputDOM.value
+  companyData.primaryColor = companyPrimInputDOM.value
+  companyData.backgroundColor = companyBackInputDOM.value
+  companyData.claim = companyClaimInputDOM.value
+  companyData.text = companyTextInputDOM.value
+  companyData.imageUrl = companyImgInputDOM.value
+  updateCompanyDOM()
+  companyFormContainer.classList.add ("hidden")
+
+
+  
+
+})
