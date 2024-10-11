@@ -1,7 +1,7 @@
 const companyData = {
   name: "Coders Cafe",
-  primaryColor: "azure",
-  backgroundColor: "green",
+  primaryColor: "#2c5545",
+  backgroundColor: "#e3e3e3",
   claim: "We make the best widgets",
   text: "We are the best company in the world, except for the other companies that are better than us.",
   imageUrl:
@@ -35,4 +35,16 @@ function updateCompanyDOM() {
     companyData.primaryColor
   );
 }
-updateCompanyDOM()
+updateCompanyDOM();
+
+const companyForm = document.getElementById("companyForm");
+
+const openBoton = document.getElementById("editCompanyBtn");
+openBoton.addEventListener("click", function () {
+  companyForm.classList.remove("hidden");
+});
+
+const closeBoton = document.getElementById("closeCompanyFormBtn")
+closeBoton.addEventListener ("click", function(){
+  companyForm.classList.add ("hidden")
+})
