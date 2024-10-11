@@ -15,3 +15,6 @@ companyNameDOM.textContent = companyData.name
 
 const companyImgDOM = document.getElementById("companyImage");
 companyImgDOM.setAttribute("src", companyData.imageUrl)
+
+const companyClaimDOM = document.getElementById("companyClaim")
+companyClaimDOM.textContent = companyData.claim
