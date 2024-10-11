@@ -10,71 +10,8 @@ const companyData = {
 
 console.log(companyData);
 
-// LOGO Y NOMBRE DE NAVEGADOR
+const companyNameDOM = document.getElementById("companyName");
+companyNameDOM.textContent = companyData.name
 
-   // Seleccionamos el elemento DOM el que tiene el id = "companyName" 
-   // Substituir el objeto textContent por CompanyData.name
-
-const nameDOM = document.getElementById("companyName")
-nameDOM.textContent = companyData.name
-
-// Epica 1
-  const companyName =  {
-    name: "companyData.name"
-  };
-
-  function capitalizeFirstLetter(companyData){
-    
-
-  }
-
-  // Historia 1.1
-  const companyData0 = capitalizeFirstLetter("companyName")
-
-  document.querySelector('#companyName').innerHTML = "Coders Cafe"
-
-  const cafe1 = document.getElementById("cafe1")
-
-  companyImageDOM = document.getElementById("companyImage");
-  companyImageDOM.setAttribute("src", companyData.imageUrl);
-
-  let companyClaimDOM = document.getElementById("companyClaim")
-    companyClaimDOM.textContent = companyData.claim
-
-let rootVariablesDOM = document.documentElement
-rootVariablesDOM.style.setProperty ("--back-color", companyData.backgroundColor);
-rootVariablesDOM.style.setProperty ("--primary-color", companyData.primaryColor);
-
-document.addEventListener('click', function(){
-  const editCompanyBtn = boton;
-  boton = document.getElementById ('fas fa-edit')
-})
-
-const boton = document.getElementById 
-
-  
-/*  // Historia 1.2
-  const heroElement = document.getElementById("hero");
-  const heroImage = document.createElement("img");
-  heroImage.src = companyData.imageUrl;
-  heroElement.appendChild (heroImage);
-
-  // Historia 1.3
-    companyData = {
-    claim: "Energia a tu alcance",
-    text: "Nos dedicamos a darte la energia para empezar tu dia.",
-    backgroundColor: "gray",
-    primaryColor: "gray"
-};
-
-const claimElement = document.getElementById('claim');
-const textElement = document.getElementById('text');
-
-claimElement.textContent = companyData.claim;
-textElement.textContent = companyData.text;
-
-//-------------- 
-//Manipular el DOM de companyImage
-
- companyImageDOM = document.getElementById("companyImage");
- companyImageDOM.setAttribute("src", companyData.imageUrl);*/
+const companyImgDOM = document.getElementById("companyImage");
+companyImgDOM.setAttribute("src", companyData.imageUrl)
