@@ -94,21 +94,51 @@ Actualizar el array y la interfaz de la página al hacer clic en "Guardar".*/
 
 let offers = [
   {
-    name: "Green Vegetables",
-    image:
+    product1: "Green Vegetables",
+    image1:
       "https://c8.alamy.com/comp/2CH190N/photo-of-green-wet-vegetable-set-with-water-drops-2CH190N.jpg",
-    price: 9.99,
+    precio1: 9.99,
   },
   {
-    name: "Fruit Pack",
-    image:
+    product2: "Fruit Pack",
+    image2:
       "https://c8.https://www.fruitypack.com/assets/files/w-star-mix-1.960x640.jpg",
-    price: 14.99,
+    precio2: 14.99,
   },
   {
-    name: "Lemons and Oranges",
-    image:
+    product3: "Lemons and Oranges",
+    image3:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEX1cf3cY-2yQOnyP2eWFnqUy9G5B5gbyP2Q&s",
-    price: 7.99,
+    precio3: 7.99,
   },
 ];
+
+function updateProductDOM() {
+  const offersProduct1DOM = document.getElementById("product1");
+  offersProduct1DOM.textContent = offers.product1;
+
+  const offersPrecio1DOM = document.getElementById("precio1");
+  offersPrecio1DOM.textContent = offers.precio1;
+
+  const offersImg1DOM = document.getElementById("imgproduct1");
+  offersImg1DOM.setAttribute("src", offers.imagen1);
+
+  const offersProduct2DOM = document.getElementById("product2");
+  offersProduct2DOM.textContent = offers.product2;
+
+  const offersPrecio2DOM = document.getElementById("precio2");
+  offersPrecio1DOM.textContent = offers.precio2;
+
+  const offersImg2DOM = document.getElementById("imgproduct2");
+  offersImg1DOM.setAttribute("src", offers.imagen2);
+
+  const offersProduct3DOM = document.getElementById("product3");
+  offersProduct3DOM.textContent = offers.product3;
+
+  const offersPrecio3DOM = document.getElementById("precio3");
+  offersPrecio3DOM.textContent = offers.precio3;
+
+  const offersImg3DOM = document.getElementById("imgproduct3");
+  offersImg3DOM.setAttribute("src", offers.imagen3);
+}
+updateCompanyDOM()
