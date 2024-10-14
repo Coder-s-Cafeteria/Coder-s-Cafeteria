@@ -92,53 +92,65 @@ Imprimir los productos en el HTML.
 Implementar el formulario de personalización.
 Actualizar el array y la interfaz de la página al hacer clic en "Guardar".*/
 
-let offers = [
+const offers = [
   {
-    product1: "Green Vegetables",
+    product11: "Green Vegetables",
     image1:
       "https://c8.alamy.com/comp/2CH190N/photo-of-green-wet-vegetable-set-with-water-drops-2CH190N.jpg",
     precio1: 9.99,
   },
   {
-    product2: "Fruit Pack",
-    image2:
-      "https://c8.https://www.fruitypack.com/assets/files/w-star-mix-1.960x640.jpg",
+    product22: "Fruit Pack",
+    image2: "https://www.fruitypack.com/assets/files/w-star-mix-1.960x640.jpg",
     precio2: 14.99,
   },
   {
-    product3: "Lemons and Oranges",
+    product33: "Lemons and Oranges",
     image3:
       "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEX1cf3cY-2yQOnyP2eWFnqUy9G5B5gbyP2Q&s",
     precio3: 7.99,
   },
 ];
+console.log(offers);
 
 function updateProductDOM() {
   const offersProduct1DOM = document.getElementById("product1");
-  offersProduct1DOM.textContent = offers.product1;
+  offersProduct1DOM.textContent = offers.product11;
 
   const offersPrecio1DOM = document.getElementById("precio1");
   offersPrecio1DOM.textContent = offers.precio1;
 
   const offersImg1DOM = document.getElementById("imgproduct1");
-  offersImg1DOM.setAttribute("src", offers.imagen1);
+  offersImg1DOM.setAttribute("src", offers.image1);
 
   const offersProduct2DOM = document.getElementById("product2");
-  offersProduct2DOM.textContent = offers.product2;
+  offersProduct2DOM.textContent = offers.product22;
 
   const offersPrecio2DOM = document.getElementById("precio2");
-  offersPrecio1DOM.textContent = offers.precio2;
+  offersPrecio2DOM.textContent = offers.precio2;
 
   const offersImg2DOM = document.getElementById("imgproduct2");
-  offersImg1DOM.setAttribute("src", offers.imagen2);
+  offersImg2DOM.setAttribute("src", offers.image2);
 
   const offersProduct3DOM = document.getElementById("product3");
-  offersProduct3DOM.textContent = offers.product3;
+  offersProduct3DOM.textContent = offers.product33;
 
   const offersPrecio3DOM = document.getElementById("precio3");
   offersPrecio3DOM.textContent = offers.precio3;
 
   const offersImg3DOM = document.getElementById("imgproduct3");
-  offersImg3DOM.setAttribute("src", offers.imagen3);
+  offersImg3DOM.setAttribute("src", offers.image3);
 }
-updateCompanyDOM()
+updateProductDOM();
+
+const companyOffersContainer = document.getElementById("offersForm");
+
+openBoton = document.getElementById("editOffersBtn");
+openBoton.addEventListener("click", function () {
+  companyOffersContainer.classList.remove("hidden");
+});
+
+closeBoton = document.getElementById("closeCompanyFormBtn");
+closeBoton.addEventListener("click", function () {
+  companyOffersContainer.classList.add("hidden");
+});
